@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <!-- Se realiza el respectivo llamado del css para el tema de los estilos -->
+    <link rel="stylesheet" href="index.css">
+    <!-- Se realiza el llamado para traer lo que tenga el javascrip -->
+    <script src="index.js"></script>
+</head>
+<body>
+    <!-- El contenedor donde va a estar almacenada mi informacion -->
+    <div class="calculadora">
+        <!-- En donde vamos a agregar la respectiva informacion o podemos escribir 
+         la propiedad (readonly)= se usa para desabilitar la funcion de escritura y
+         solo quedaria para mostrar datos en este caso-->
+        <input type="text" id="pantalla" readonly>
+        <!-- Se crea un contenedor donde vamos a tener todos los botones de la caluladora -->
+        <div class="botones">
+            <!-- Se realiza la creacion del boton para poderlo utilizar,el boton cuenta con una 
+             propiedad que se llama onclick el cual serealiza la funcion de llamar la funcion creda
+              en este caso agregar(), en cual dentro del boton tiene el dato que se muestra al usuario -->
+            <button onclick="limpiar('AC')">AC</button>
+            <button onclick="agregar('(')">(</button>
+            <button onclick="agregar(')')">)</button>
+            <button class="operador" onclick="agregar('%')">%</button>
+            <button onclick="agregar('7')">7</button>
+            <button onclick="agregar('8')">8</button>
+            <button onclick="agregar('9')">9</button>
+            <!-- Para los operadores se asigna una clase para poderlos indenticar mas facil y se le 
+             pone nombre de operador -->
+            <button class="operador" onclick="agregar('/')">/</button>
+            <button onclick="agregar('4')">4</button>
+            <button onclick="agregar('5')">5</button>
+            <button onclick="agregar('6')">6</button>
+            <button class="operador" onclick="agregar('*')">*</button>
+            <button onclick="agregar('1')">1</button>
+            <button onclick="agregar('2')">2</button>
+            <button onclick="agregar('3')">3</button>
+            <button class="operador" onclick="agregar('-')">-</button>
+            <button onclick="agregar('0')">0</button>
+            <button onclick="agregar('.')">.</button>
+            <button onclick="retroceder()">←</button>
+            <!--Se Agrega a estos dos botones el tema de los estilos -->
+            <button class="operador" onclick="agregar('+')" style="height:210%" >+</button>
+            <button onclick="calcular()" class="operador" style="grid-column: span 3;">=</button>
+        </div>
+    </div>
+</body>
+</html>
